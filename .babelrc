@@ -10,12 +10,12 @@
 		}]
 	],
   "plugins": [
+    "react-hot-loader/babel",
     "babel-plugin-transform-class-properties"
   ],
 	"env": {
 		"test": {
 			"plugins": [
-        "react-hot-loader/babel",
 				"babel-plugin-transform-es2015-modules-commonjs"
 			]
 		}
