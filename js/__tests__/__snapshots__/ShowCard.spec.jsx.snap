@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowCard should render as per given props 1`] = `
+<styled.div>
+  <styled.img
+    alt="Atlanta Show Poster"
+    src="/public/img/posters/a.jpg"
+  />
+  <div>
+    <h3>
+      Atlanta
+    </h3>
+    <h4>
+      (
+      2008–2013
+      )
+    </h4>
+    <p>
+      Two cousins, with different views on art versus commerce, on their way up through the Atlanta rap scene; "Earnest 'Earn' Marks," an ambitious college drop-out and his estranged cousin, who suddenly becomes a star.
+    </p>
+  </div>
+</styled.div>
+`;
