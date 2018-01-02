@@ -1,14 +1,24 @@
 // @flow
 
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-const Landing = () => (
+import {setSearchTerm} from './actionCreators';
+
+const Landing = (props: { searchTerm: string, handleSearchTermChange: Function }) => (
   <div className="landing">
     <h1>svideo</h1>
-    <input type="text" placeholder="Search" />
+    <input type="text" placeholder="Search" value={props.searchTerm} onChange={props.handleSearchTermChange} />
     <Link to="/search">or Browse All</Link>
   </div>
 );
 
-export default Landing;
+const mapStateToProps = state => ({ searchTerm: state.searchTerm });
+const mapDispatchToProps = (dispatch: Function) => ({
+  handleSearchTermChange(event) {
+    dispatch(setSearchTerm(event.target.value))
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Landing);
