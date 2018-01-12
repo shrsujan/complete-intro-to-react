@@ -11,6 +11,7 @@ const ratedShows = showsObj.shows.map(show =>
   Object.assign({ rating: `${Math.floor(Math.random() * 9)}.${Math.floor(Math.random() * 9)}` }, show)
 );
 
+// API that generates a random rating (out of 5) for a valid show id
 app.get('/:id', (req, res) => {
   const show = ratedShows.find(item => item.imdbID === req.params.id);
   if (show) {
